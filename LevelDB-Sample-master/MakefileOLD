@@ -1,0 +1,8 @@
+all: sample
+
+sample: sample.cpp
+	g++ -o $@ $<  -lleveldb -lpthread -lsnappy -L/home/ro/Downloads/leveldb-master -I/home/ro/Downloads/leveldb-master/include
+
+
+clean:
+	rm -f sample
